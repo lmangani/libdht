@@ -34,7 +34,7 @@ jobs:
         -S ${{ github.workspace }}
 
     - name: Build
-      run: cmake --build
+      run: cmake --build .
 
     - name: Test
       working-directory: ${{ steps.strings.outputs.build-output-dir }}
