@@ -1,8 +1,6 @@
 libdht
 ======
 
-[![Build Status](https://travis-ci.com/naturalpolice/libdht.svg?branch=master)](https://travis-ci.com/naturalpolice/libdht)
-
 `libdht` is a C implementation of the Kademlia-based Distributed Hash Table
 (DHT) used in the BitTorrent network (aka "mainline DHT").
 
