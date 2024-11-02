@@ -1,6 +1,8 @@
 libdht
 ======
 
+[![CMake CI](https://github.com/lmangani/libdht/actions/workflows/CMAKE_CI.yml/badge.svg)](https://github.com/lmangani/libdht/actions/workflows/CMAKE_CI.yml)
+
 `libdht` is a C implementation of the Kademlia-based Distributed Hash Table
 (DHT) used in the BitTorrent network (aka "mainline DHT").
 
