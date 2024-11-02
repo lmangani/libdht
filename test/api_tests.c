@@ -58,7 +58,7 @@ static int io_run(struct state *st)
     dht_node_work(&st->node);
 
 #ifdef TEST_COVERAGE
-    __gcov_flush();
+extern void __gcov_flush();
 #endif
 
     return 0;
