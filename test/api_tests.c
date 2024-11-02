@@ -249,7 +249,7 @@ static void putm_callback2(struct bvalue **pval, void *opaque)
 
     assert_non_null(*pval);
     assert_non_null((s = bvalue_string(*pval, &l)));
-    assert_string_equal(s, "Hello1");
+    assert_string_equal((const char *)s, "Hello1");
     bvalue_free(*pval);
 
     *pval = bvalue_new_string((unsigned char *)"Hello2", 6);
@@ -265,7 +265,7 @@ static void putm_callback3(struct bvalue **pval, void *opaque)
 
     assert_non_null(*pval);
     assert_non_null((s = bvalue_string(*pval, &l)));
-    assert_string_equal(s, "Hello2");
+    assert_string_equal((const char *)s, "Hello2");
     bvalue_free(*pval);
 
     *pval = bvalue_new_string((unsigned char *)"Hello3", 6);
@@ -302,7 +302,7 @@ static void mutable_put_get_test1(void **state)
     while (!priv.done) io_run(st);
     assert_non_null(priv.val);
     assert_non_null((s = bvalue_string(priv.val, &l)));
-    assert_string_equal(s, "Hello1");
+    assert_string_equal((const char *)s, "Hello1");
     bvalue_free(priv.val);
 
     /* Put2 */
@@ -320,7 +320,7 @@ static void mutable_put_get_test1(void **state)
     while (!priv.done) io_run(st);
     assert_non_null(priv.val);
     assert_non_null((s = bvalue_string(priv.val, &l)));
-    assert_string_equal(s, "Hello2");
+    assert_string_equal((const char *)s, "Hello2");
     bvalue_free(priv.val);
 
     /* Put3 */
@@ -338,7 +338,7 @@ static void mutable_put_get_test1(void **state)
     while (!priv.done) io_run(st);
     assert_non_null(priv.val);
     assert_non_null((s = bvalue_string(priv.val, &l)));
-    assert_string_equal(s, "Hello3");
+    assert_string_equal((const char *)s, "Hello3");
     bvalue_free(priv.val);
 }
 
